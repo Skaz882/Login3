@@ -1,5 +1,6 @@
 package com.example.login
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -24,6 +25,10 @@ class MainActivity : AppCompatActivity() {
         val btnLogin = findViewById<Button>(R.id.idButton)
 
         btnLogin.setOnClickListener {
+            val toastError: Toast? = null
+            val isOK: LoginSuccess? = null
+
+        btnLogin.setOnClickListener {
             when (CheckLogin(txtLogin.text.toString(), txtPassword.text.toString())){
 
                 LoginSuccess.login -> {
@@ -36,8 +41,8 @@ class MainActivity : AppCompatActivity() {
                     txtPassword.requestFocus()
                 }
 
-                else ->{
-                    Toast.makeText(applicationContext, "Success!", Toast.LENGTH_LONG).show()
+                else ->
+                    startActivity(Intent(this@MainActivity, MainClassList::class.java))
                 }
             }
         }
