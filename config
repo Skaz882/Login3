@@ -1,0 +1,22 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "MAD105Login"]
+	url = https://github.com/Skaz882/Login.git
+	fetch = +refs/heads/*:refs/remotes/MAD105Login/*
+[branch "master"]
+	remote = MAD105LastScreens
+	merge = refs/heads/master
+[remote "MAD105Login2"]
+	url = https://github.com/Skaz882/Login2.git
+	fetch = +refs/heads/*:refs/remotes/MAD105Login2/*
+[remote "MAD105Login3"]
+	url = https://github.com/Skaz882/Login3.git
+	fetch = +refs/heads/*:refs/remotes/MAD105Login3/*
+[remote "MAD105LastScreens"]
+	url = https://github.com/Skaz882/LastScreens.git
+	fetch = +refs/heads/*:refs/remotes/MAD105LastScreens/*
